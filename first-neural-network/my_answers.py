@@ -9,6 +9,7 @@ class NeuralNetwork(object):
         self.output_nodes = output_nodes
 
         # Initialize weights
+        np.random.seed(121) # set seed for repeatability
         self.weights_input_to_hidden = np.random.normal(0.0, self.input_nodes**-0.5, 
                                        (self.input_nodes, self.hidden_nodes))
 
@@ -147,7 +148,7 @@ class NeuralNetwork(object):
 #########################################################
 # Set your hyperparameters here
 ##########################################################
-iterations = 1500
-learning_rate = 2.0
+iterations = 2000
+learning_rate = 1.8
 hidden_nodes = 7
 output_nodes = 1
